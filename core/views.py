@@ -3,7 +3,10 @@ from django.shortcuts import render
 from .models import Project
 
 def index(request):
-    return render(request, 'promotin/index.html')
+    context = {
+        'projects': Project.objects.all()
+    }
+    return render(request, 'promotin/index.html', context)
 
 def signup_umkm(request):
     return render(request, 'allauth/account/signup-umkm.html')
@@ -12,7 +15,10 @@ def signup_influencer(request):
     return render(request, 'allauth/account/signup-influencer.html')
 
 def project_all(request):
-    return render(request, 'promotin/project-list.html')
+    context = {
+        'projects': Project.objects.all(),
+    }
+    return render(request, 'promotin/project-list.html', context)
 
 def project_detail(request):
     return render(request, 'promotin/product-page.html')

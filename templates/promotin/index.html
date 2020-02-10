@@ -69,7 +69,9 @@
 				<div class="features_items">
 					<!--features_items-->
 					<h2 class="title text-center sub-title">Featured Projects</h2>
+
 					<!--						SINGLE PRODUCT-->
+					{% for project in projects %}
 					<div class="col-sm-4">
 						<div class="product-image-wrapper">
 							<div class="single-products">
@@ -77,110 +79,16 @@
 									<img class="img-source" src="{% static 'images/assets/man1.jpg' %}" alt="" />
 								</div>
 								<div class="productinfor">
-									<h2>MAKARO</h2>
-									<p class="btn border-white">due date: 13 November</p>
-									<p>Kami membutuhkan promosi melalui instagram untuk mempromosikan produk kami yaitu
-										<a> Raka\123.</a></p>
-									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a><br>
-									<a href="#" class="alternative-button center-block">more details.</a>
+									<h3>{{ project.title }}</h3>
+									<p class="btn border-white">due date: {{ project.due_date }}
+									</p>
+									<p>{{ project.decsription|slice:':120' }}</p>
+									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-sm-4">
-						<div class="product-image-wrapper">
-							<div class="single-products">
-								<div class="img-container">
-									<img class="img-source" src="{% static 'images/assets/man1.jpg' %}" alt="" />
-								</div>
-								<div class="productinfor">
-									<h2>MAKARO</h2>
-									<p class="btn border-white">due date: 13 November</p>
-									<p>Kami membutuhkan promosi melalui instagram untuk mempromosikan produk kami yaitu
-										<a> Raka\123.</a></p>
-									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a><br>
-									<a href="#" class="alternative-button center-block">more details.</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="product-image-wrapper">
-							<div class="single-products">
-								<div class="img-container">
-									<img class="img-source" src="{% static 'images/assets/man1.jpg' %}" alt="" />
-								</div>
-								<div class="productinfor">
-									<h2>MAKARO</h2>
-									<p class="btn border-white">due date: 13 November</p>
-									<p>Kami membutuhkan promosi melalui instagram untuk mempromosikan produk kami yaitu
-										<a> Raka\123.</a></p>
-									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a><br>
-									<a href="#" class="alternative-button center-block">more details.</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="product-image-wrapper">
-							<div class="single-products">
-								<div class="img-container">
-									<img class="img-source" src="{% static 'images/assets/man1.jpg' %}" alt="" />
-								</div>
-								<div class="productinfor">
-									<h2>MAKARO</h2>
-									<p class="btn border-white">due date: 13 November</p>
-									<p>Kami membutuhkan promosi melalui instagram untuk mempromosikan produk kami yaitu
-										<a> Raka\123.</a></p>
-									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a><br>
-									<a href="#" class="alternative-button center-block">more details.</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="product-image-wrapper">
-							<div class="single-products">
-								<div class="img-container">
-									<img class="img-source" src="{% static 'images/assets/man1.jpg' %}" alt="" />
-								</div>
-								<div class="productinfor">
-									<h2>MAKARO</h2>
-									<p class="btn border-white">due date: 13 November</p>
-									<p>Kami membutuhkan promosi melalui instagram untuk mempromosikan produk kami yaitu
-										<a> Raka\123.</a></p>
-									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a><br>
-									<a href="#" class="alternative-button center-block">more details.</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="product-image-wrapper">
-							<div class="single-products">
-								<div class="img-container">
-									<img class="img-source" src="{% static 'images/assets/man1.jpg' %}" alt="" />
-								</div>
-								<div class="productinfor">
-									<h2>MAKARO</h2>
-									<p class="btn border-white">due date: 13 November</p>
-									<p>Kami membutuhkan promosi melalui instagram untuk mempromosikan produk kami yaitu
-										<a> Raka\123.</a></p>
-									<a href="#" class="btn btn-default bid-project black-button">Bid Project</a><br>
-									<a href="#" class="alternative-button center-block">more details.</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-
-
+					{% endfor %}
 
 				</div>
 				<!--features_items-->

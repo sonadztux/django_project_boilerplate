@@ -3,6 +3,10 @@ from django.conf import settings
 
 class Project(models.Model):
     title = models.CharField(max_length=150)
+    created_at = models.DateTimeField(auto_now_add=True)
+    due_date = models.DateField()
+    decsription = models.TextField()
+    status = models.CharField(max_length=50)
     price = models.FloatField()
     
     def __str__(self):
