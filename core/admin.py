@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Project, OrderProject, Order
+
+admin.site.register(Project)
+admin.site.register(OrderProject)
+admin.site.register(Order)
