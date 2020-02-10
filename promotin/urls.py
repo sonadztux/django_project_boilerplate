@@ -7,10 +7,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
 
-    path('', include('core.urls', namespace='core-index')),
+    path('', include('core.urls', namespace='index')),
 
-    path('project/all', include('core.urls', namespace='project-all')),
-    path('project/detail/', include('core.urls', namespace='project-detail'))
+    path('project/', include('core.urls')),
+    # path('project/detail/', include('core.urls', namespace='project-detail')),
+
+    path('influencer/all/', include('core.urls', namespace='influencers')),
 ]
 
 if settings.DEBUG:
