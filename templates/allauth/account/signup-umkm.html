@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>SignUp as UMKM | PROMOTIN.ID</title>
+{% endblock title %}
+
+{% block header_bottom %}
+<div class="header-bottom" id="header-project-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+                <div class=" div-login">
+                    <h1 class="header-text">
+                        <b>
+                            REGISTER
+                        </b>
+                    </h1>
+                    <div class="row">
+                        <div class="col-sm-12 form-group form-login">
+                            <form action="" method="post">
+                                <input type="text" placeholder="Masukkan Nama Lengkap" class="input-lg input-login"
+                                    name="nama_lengkap">
+                                <br>
+                                <input type="text" placeholder="Masukkan Nomor Telepon" class="input-lg input-login"
+                                    name="no_telepon">
+                                <br>
+                                <input type="text" placeholder="Masukkan Nama UKMM" class="input-lg input-login"
+                                    name="username_instagram">
+                                <br>
+
+                                <select name="" id="selection-bidang" class="input-lg input-login">
+                                    <option value="" disabled selected>Masukkan Bidang UMKM</option>
+                                    <option value="">Makanan</option>
+                                    <option value="">Minuman</option>
+                                    <option value="">Fashion</option>
+                                    <option value="">Bidang Lain</option>
+                                </select>
+                                <hr>
+                                <input type="text" placeholder="Masukkan Username" class="input-lg input-login"
+                                    name="username">
+                                <br>
+                                <input type="password" placeholder="Masukkan Password" name="password"
+                                    class="input-lg input-login">
+                                <br>
+                                <input type="password" placeholder="Konfirmasi Password" name="password"
+                                    class="input-lg input-login">
+                                <input type="button" class="btn btn-default black-button input-lg" value="REGISTER">
+                                <br>
+                                <p>I have an account</p>
+                                <a href="{% url 'account_login' %}" id="register">
+                                    <h4 class="register-button">Login</h4>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock header_bottom %}

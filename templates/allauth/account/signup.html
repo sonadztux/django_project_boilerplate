@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>Register | PROMOTIN.ID</title>
+{% endblock title %}
+
+{% block header_bottom %}
+<div class="header-bottom" id="header-project-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+        <div class=" div-login">
+          <h1 class="header-text">
+            <b>
+              Halo,
+            </b>
+          </h1>
+          <h3>
+            silakan pilih posisi kamu..
+          </h3>
+          <div class="row">
+            <div class="col-sm-12 form-group form-login">
+              <div class="col-sm-6">
+                <a href="{% url 'core:signup_umkm' %}">
+                  <input type="button" class="btn btn-default black-button input-lg" value="UMKM">
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a href="{% url 'core:signup_influencer' %}">
+                  <input type="button" class="btn btn-default white-button input-lg" value="INFLUENCER">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock header_bottom %}

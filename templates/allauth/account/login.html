@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>Login | PROMOTIN.ID</title>
+{% endblock title %}
+
+{% block header_bottom %}
+<div class="header-bottom" id="header-project-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+        <div class=" div-login">
+          <h1 class="header-text">
+            <b>
+              LOGIN
+            </b>
+          </h1>
+          <div class="row">
+            <div class="col-sm-12 form-group form-login">
+              <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                <input type="text" placeholder="Masukkan Username" class="input-lg input-login" name="username"
+                  required>
+                <input type="password" placeholder="Masukkan Password" name="password" class="input-lg input-login"
+                  required>
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <br>
+                <button class="btn btn-default black-button input-lg" type="submit">LOGIN</button>
+                <br>
+                <a href="" id="forgot-password">
+                  <p>Forgot Password</p>
+                </a>
+                <p>Doesn't have any account yet?</p>
+                <a href="{% url 'account_signup' %}" id="register">
+                  <h4 class="register-button">Register</h4>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock header_bottom %}
